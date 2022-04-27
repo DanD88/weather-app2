@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBK3E_7ASxbDUPB-Xxz7UOzVgJZymROzo8&libraries=places"></script>
+    <link rel="stylesheet" href="style/app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/skycons/1396634940/skycons.min.js"></script>
+    <script defer src="app.js"></script>
+
+</head>
+
+<body>
+
+    <div class="main">
+
+        <div class="top">
+            <h2 class="active" href="#home">
+               Weather App
+            </h2>
+            <!-- <div class="city-search-container">
+                    <input type="text" class="city-search" data-city-search placeholder="Enter Location">
+                  </div>  -->
+
+            <div class="search-container">
+                <input type="text" autocomplete="off" placeholder="Search City and Country" class="input_text">
+                
+                <!-- <button type="submit" value="Submit" class="submit">Submit</button> -->
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="location">
+                <h1>Location</h1>
+                <h2 class="name"></h2>
+                <h2 class="country"></h2>
+                <div class="date"></div>
+            </div>
+
+            <div class="temperature">
+                <h1>Temperature</h1>
+                <h3 class="temp"></h3>
+            </div>
+
+            <div class="description">
+                <h1>Condition</h1>
+                <h3 class="desc"></h3>
+                <div class="weather-icon">
+                    <img src="icons/unknown.png" alt="">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyD4hEuSskTMAv1gtL_Xa0PPbJBhiXOsFow",
+    authDomain: "weather-app-276522.firebaseapp.com",
+    databaseURL: "https://weather-app-276522.firebaseio.com",
+    projectId: "weather-app-276522",
+    storageBucket: "weather-app-276522.appspot.com",
+    messagingSenderId: "853194163070",
+    appId: "1:853194163070:web:7ced2fec72ce7d897e292f",
+    measurementId: "G-3JZ8TNSJQ4"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+</body>
+
+</html>
