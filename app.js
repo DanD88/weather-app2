@@ -16,9 +16,11 @@ function setQuery(evt) {
   }
 }
 
+const apiKey = "71da661a0a2dc1b4bb6ffd6ce390734e";
+
 function getResults(query) {
   fetch(
-    `https://api.openweathermap.org/data/2.5/weather?q=${query}&units=imperial&appid=71da661a0a2dc1b4bb6ffd6ce390734e`
+    `https://api.openweathermap.org/data/2.5/weather?q=${query}&units=imperial&appid=${apiKey}`
   )
     .then((response) => response.json())
     .then((data) => {
