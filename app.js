@@ -29,7 +29,7 @@ function getResults(query) {
       const descValue = data["weather"][0]["description"];
       const iconId = data["weather"][0]["icon"];
       const countryValue = data.sys.country;
-
+// date builder
       let now = new Date();
       let date = document.querySelector(".location .date");
       date.innerText = dateBuilder(now);
